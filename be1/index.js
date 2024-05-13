@@ -1,6 +1,6 @@
 import express from 'express'
 const app = express()
-const port = 3000
+const port = 3001
 import cors from 'cors'
 
 app.use(cors())
@@ -51,7 +51,7 @@ app.post('/teacher', async (req, res) => {
   app.delete('/teacher/:id', async (req, res) => {
     let {id}=req.params
     const deletedTeacher= await teachers.findByIdAndDelete(id)
-    res.send('data deleted')
+    res.send(deletedTeacher)
   })
 
   app.put('/teacher/:id', async (req, res) => {
@@ -60,8 +60,6 @@ app.post('/teacher', async (req, res) => {
     const updateTeacher= await teachers.findByIdAndUpdate(id,obj)
     res.send('data updated')
   })
-
-
 
 
 

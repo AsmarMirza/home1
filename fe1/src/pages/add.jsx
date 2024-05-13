@@ -7,7 +7,7 @@ function Add() {
 
     
     async function addTeacher(values){
-        const res=await fetch("http://localhost:3000/teacher/",
+        const res=await fetch("http://localhost:3001/teacher/",
         {
             headers: {
               'Accept': 'application/json',
