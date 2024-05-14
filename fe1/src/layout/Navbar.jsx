@@ -1,16 +1,36 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import "./navbar.css"
+import React from "react";
+import { Link } from "react-router-dom";
+import "./navbar.css";
 
 function Navbar() {
   return (
-    <div className='navbar'>
-      <Link to={"/"}>Home</Link>
-      <Link to={"/basket"}>Basket</Link>
-      <Link to={"/add"}>Add</Link>
-      <Link to={"/adminPanel"}>Admin Panel</Link>
-    </div>
-  )
+    <nav>
+      <ul className="navbar">
+        <li>
+          <Link to={"/"}>Home</Link>
+        </li>
+        <li>
+          <Link to={"/basket"}>Basket</Link>
+        </li>
+        <li>
+        
+          <Link to={"/add"}>Add</Link>
+        </li>
+        <li>
+          <Link to={"/adminPanel"}>Admin Panel</Link>
+        </li>
+        <li className="icon">
+          <i className="fa-solid fa-bars"></i>
+        </li>
+       <ul className="dropDown">
+        <li><Link to={"/"}>Home</Link></li>
+        <li><Link to={"/basket"}>Basket</Link></li>
+        <li><Link to={"/add"}>Add</Link></li>
+        <li><Link to={"/adminPanel"}>Admin Panel</Link></li>
+       </ul>
+      </ul>
+    </nav>
+  );
 }
 
-export default Navbar
+export default Navbar;

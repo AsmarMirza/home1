@@ -7,4 +7,10 @@
     border: 1px solid black;
     margin-bottom: 20px;
     background-color: red;
+    /* .icon{
+        display: none;
+    } */
+}
+.dropDown{
+    display: none;
 }
